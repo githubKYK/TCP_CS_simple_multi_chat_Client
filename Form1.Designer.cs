@@ -31,6 +31,7 @@
             this.list_chats = new System.Windows.Forms.ListBox();
             this.txt_msg = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
+            this.btn_connect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // list_chats
@@ -44,10 +45,10 @@
             // 
             // txt_msg
             // 
-            this.txt_msg.Location = new System.Drawing.Point(0, 394);
+            this.txt_msg.Location = new System.Drawing.Point(139, 394);
             this.txt_msg.Multiline = true;
             this.txt_msg.Name = "txt_msg";
-            this.txt_msg.Size = new System.Drawing.Size(660, 50);
+            this.txt_msg.Size = new System.Drawing.Size(521, 50);
             this.txt_msg.TabIndex = 1;
             // 
             // btn_send
@@ -60,11 +61,22 @@
             this.btn_send.UseVisualStyleBackColor = true;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
+            // btn_connect
+            // 
+            this.btn_connect.Location = new System.Drawing.Point(0, 394);
+            this.btn_connect.Name = "btn_connect";
+            this.btn_connect.Size = new System.Drawing.Size(133, 50);
+            this.btn_connect.TabIndex = 3;
+            this.btn_connect.Text = "Connect server";
+            this.btn_connect.UseVisualStyleBackColor = true;
+            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_connect);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.txt_msg);
             this.Controls.Add(this.list_chats);
@@ -81,6 +93,7 @@
         private System.Windows.Forms.ListBox list_chats;
         private System.Windows.Forms.TextBox txt_msg;
         private System.Windows.Forms.Button btn_send;
+        private System.Windows.Forms.Button btn_connect;
     }
 }
 

@@ -46,18 +46,29 @@ namespace ClientClient
             }
             catch (Exception)
             {
+                invokeFn("Disconnect server");
             }
         }
         public void start()
         {
-            m_client = new TcpClient();
-            m_client.Connect("127.0.0.1", 3000);
-            m_stream = m_client.GetStream();
-            m_reader = new BinaryReader(m_stream, Encoding.UTF8);
-            m_writer = new BinaryWriter(m_stream, Encoding.UTF8);
+            try
+            {
+                m_client = new TcpClient();
+                m_client.Connect("127.0.0.1", 3000);
+                m_stream = m_client.GetStream();
+                m_reader = new BinaryReader(m_stream, Encoding.UTF8);
+                m_writer = new BinaryWriter(m_stream, Encoding.UTF8);
 
-            m_thread = new Thread(listenServer);
-            m_thread.Start();
+                m_thread = new Thread(listenServer);
+                m_thread.Start();
+
+                updateChat("Conecting server...");
+
+            }
+            catch (Exception ex)
+            {
+                updateChat("Conect fail.");
+            }
 
         }
         public Form1()
@@ -70,11 +81,23 @@ namespace ClientClient
             string text = this.txt_msg.Text;
             if(text != string.Empty)
             {
-                m_writer.Write(text);
+                try
+                {
+                    m_writer.Write(text);
+                }
+                catch (Exception ex)
+                {
+                    updateChat("Server disconnect.");
+                }
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_connect_Click(object sender, EventArgs e)
         {
             this.start();
         }
