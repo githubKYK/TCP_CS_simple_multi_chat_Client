@@ -1,0 +1,11 @@
+D:\code\visual_studio\c#\ClientClient\bin\Debug\ClientClient.exe.config
+D:\code\visual_studio\c#\ClientClient\bin\Debug\ClientClient.exe
+D:\code\visual_studio\c#\ClientClient\bin\Debug\ClientClient.pdb
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.csproj.AssemblyReference.cache
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.csproj.SuggestedBindingRedirects.cache
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.Form1.resources
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.Properties.Resources.resources
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.csproj.GenerateResource.cache
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.csproj.CoreCompileInputs.cache
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.exe
+D:\code\visual_studio\c#\ClientClient\obj\Debug\ClientClient.pdb
